@@ -46,7 +46,7 @@ You can turn on the **Secure transfer required** property when you create a stor
 
 ## Require secure transfer from code
 
-To require secure transfer programmatically, set the *enableHttpsTrafficOnly* property to *True* on the storage account. You can set this property by using the Storage Resource Provider REST API, client libraries, or tools:
+To require secure transfer programmatically, set the *supportsHttpsTrafficOnly* property to *True* on the storage account. You can set this property by using the Storage Resource Provider REST API, client libraries, or tools:
 
 - [REST API](/rest/api/storagerp/storageaccounts)
 - [PowerShell](/powershell/module/az.storage/set-azstorageaccount)
@@ -55,6 +55,8 @@ To require secure transfer programmatically, set the *enableHttpsTrafficOnly* pr
 - [.NET SDK](https://www.nuget.org/packages/Microsoft.Azure.Management.Storage)
 - [Python SDK](https://pypi.org/project/azure-mgmt-storage)
 - [Ruby SDK](https://rubygems.org/gems/azure_mgmt_storage)
+
+> The property is called "supportsHttpsTrafficOnly" in the REST API and in [Azure Resource Manager (Bicep)](https://learn.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?pivots=deployment-language-bicep#storageaccountpropertiescreateparametersorstorageaccountproperties), however for certain tools it's also called EnableHttpsTrafficOnly. for example see [Azure PowerShell Module - az.storage](https://learn.microsoft.com/en-us/powershell/module/az.storage/set-azstorageaccount?view=azps-15.3.0#-enablehttpstrafficonly)
 
 ## Require secure transfer with PowerShell
 
